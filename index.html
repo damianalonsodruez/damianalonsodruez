@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Damián Alonso #11 · Piloto de velocidad</title>
-<meta name="description" content="Damián Alonso Druez, piloto de velocidad de 15 años. SSP300 Copa de España y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<meta name="description" content="Damián Alonso Druez, piloto de velocidad nacido en 2011. SSP300 Copa de España y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
 <link rel="icon" type="image/png" href="img/avispa.png">
 <meta property="og:title" content="Damián Alonso #11 · Piloto de velocidad">
-<meta property="og:description" content="Piloto de motociclismo de 15 años. SSP300 y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<meta property="og:description" content="Piloto de motociclismo nacido en 2011. SSP300 y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
 <meta property="og:image" content="https://damianalonsodruez.com/img/ep-alb272.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -350,7 +350,7 @@ footer a{color:var(--y)}
     <div class="cband">
       <div class="in-w cb">
         <div class="cleft">
-          <span class="ctag">Piloto de motociclismo · 15 años</span>
+          <span class="ctag">Piloto de motociclismo · <span class="edad">14</span> años</span>
           <h1 class="cname">Damián <span class="p">Alonso</span></h1>
           <p class="cmeta"><span>#11</span><span>SSP300</span><span>SRC Racing Team</span></p>
         </div>
@@ -366,7 +366,7 @@ footer a{color:var(--y)}
 
 <!-- DATOS CLAVE -->
 <div class="facts"><div class="in-w">
-  <div class="fact"><b>15</b><span>años de edad</span></div>
+  <div class="fact"><b class="edad">14</b><span>años de edad</span></div>
   <div class="fact"><b>10</b><span>temporadas compitiendo</span></div>
   <div class="fact"><b>4</b><span>campeonatos ganados</span></div>
   <div class="fact"><b>2</b><span>victorias en la Copa de España 2026</span></div>
@@ -381,7 +381,7 @@ footer a{color:var(--y)}
       <p>Damián empezó a montar en moto con <b>5 años</b> en la Lorenzo Zamora School y a los 6 ya competía en Minimotos.</p>
       <p>Desde entonces ha ido subiendo de categoría cada temporada: Mini GP, Moto5, Promo3 y ahora <b>SSP300</b>, con el equipo <b>SRC Racing Team</b>. En 2026 ha luchado por ganar la Copa de España y ha debutado en el <b>Campeonato de España (ESBK)</b>.</p>
       <dl class="ficha">
-        <div><dt>Nacimiento</dt><dd>20/10/2011</dd></div>
+        <div><dt>Nacimiento</dt><dd>20/11/2011</dd></div>
         <div><dt>Ciudad</dt><dd>Toro (Zamora)</dd></div>
         <div><dt>Equipo</dt><dd>SRC Racing Team</dd></div>
         <div><dt>Moto</dt><dd>Yamaha R3</dd></div>
@@ -507,6 +507,9 @@ try{history.scrollRestoration='manual'}catch(_){}
 if(location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(_){}}
 scrollTo(0,0);addEventListener('load',()=>scrollTo(0,0));addEventListener('pageshow',()=>scrollTo(0,0));
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();const id=a.getAttribute('href').slice(1);const t=id==='top'?document.body:document.getElementById(id);if(!t)return;const y=id==='top'?0:t.getBoundingClientRect().top+scrollY-72;scrollTo({top:y,behavior:'smooth'})});
+
+/* edad calculada sola (nació el 20/11/2011) */
+(function(){const n=new Date(2011,10,20),h=new Date();let e=h.getFullYear()-n.getFullYear();if(h.getMonth()<n.getMonth()||(h.getMonth()===n.getMonth()&&h.getDate()<n.getDate()))e--;document.querySelectorAll('.edad').forEach(x=>x.textContent=e)})();
 
 /* animaciones al hacer scroll */
 (function(){
