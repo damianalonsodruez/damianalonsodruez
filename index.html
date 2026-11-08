@@ -64,15 +64,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero{position:relative;height:100svh;min-height:680px;padding-top:72px;overflow:hidden;background:var(--y);color:var(--ink);display:flex;flex-direction:column}
 .hC{position:relative;flex:1;display:flex;flex-direction:column}
 .slices{position:relative;flex:1;min-height:0;display:flex;--s:70px;--g:10px}
-.sl{flex:1;position:relative;overflow:hidden;margin-left:calc((var(--s) - var(--g)) * -1);clip-path:polygon(var(--s) 0,100% 0,calc(100% - var(--s)) 100%,0 100%);animation:up 1s var(--e) both;transition:flex .8s var(--e)}
+.sl{flex:1;position:relative;overflow:hidden;margin-left:calc((var(--s) - var(--g)) * -1);clip-path:polygon(var(--s) 0,100% 0,calc(100% - var(--s)) 100%,0 100%);animation:up 1s var(--e) both;transform:translateZ(0)}
 .sl:first-child{margin-left:0;clip-path:polygon(0 0,100% 0,calc(100% - var(--s)) 100%,0 100%)}
 .sl:last-child{clip-path:polygon(var(--s) 0,100% 0,100% 100%,0 100%)}
 .sl:nth-child(2){animation-delay:.1s}.sl:nth-child(3){animation-delay:.2s}.sl:nth-child(4){animation-delay:.3s}
 @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-.sl:hover{flex:1.6}
-.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateY(0);transition:transform 1.1s cubic-bezier(.76,0,.24,1),filter 1.1s}
-.sl img.in{transform:translateY(-100%)}
-.sl img.out{transform:translateY(100%);filter:brightness(.4)}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translate3d(0,0,0);backface-visibility:hidden;will-change:transform;transition:transform 1.1s cubic-bezier(.76,0,.24,1),filter 1.1s}
+.sl img.in{transform:translate3d(0,-100%,0);transition:none}
+.sl img.out{transform:translate3d(0,100%,0);filter:brightness(.4)}
 .cband{position:relative;flex:0 0 auto;padding-block:clamp(26px,4vh,44px) clamp(30px,5vh,52px)}
 .cb{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,64px);align-items:end}
 .ctag{display:inline-block;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--y);padding:6px 12px;border-radius:999px}
@@ -516,8 +515,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
   const add=(sel,cls,step)=>document.querySelectorAll(sel).forEach((el,i)=>{el.classList.add(cls);if(step)el.style.transitionDelay=((i%4)*step)+'ms'});
   add('.label','sa-left');add('.title','sa-title');add('.sub-title','sa-title');add('.intro','sa-up');add('.sub-intro','sa-up');
   add('.about p','sa-up');add('.ficha','sa-up');add('.about .photo','sa-clip');
-  add('.race','sa-up',120);add('.race .photo','sa-clip');
-  add('.years','sa-up');add('.yr','sa-left',110);add('.legend','sa-up');
+  add('.race','sa-up',120);
+  add('.years','sa-up');add('.track','sa-up');add('.legend','sa-up');
   add('.grid .photo','sa-zoom',90);
   add('.why > div','sa-up',110);add('.spot-img','sa-clip');add('.spot-list li','sa-left',100);
   add('.tier','sa-up',130);add('.logos > div','sa-zoom',50);add('.cta-box','sa-zoom');
@@ -571,16 +570,30 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
 /* portada: fotos que se deslizan y van cambiando */
 (function(){
   const pool=[['h-j72','Damián de frente saliendo de una curva','52% 55%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','55% 40%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 50%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','60% 50%']];
-  pool.forEach(([n])=>{const i=new Image();i.src='img/'+n+'.jpg'});
-  const slices=[...document.querySelectorAll('#slices .sl')];let next=0,k=0;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  setInterval(()=>{
-    const vis=slices.filter(x=>x.offsetParent);const sl=vis[k%vis.length];k++;
-    const cur=sl.querySelector('img.on');const [n,alt,pos]=pool[next%pool.length];next++;
-    const im=document.createElement('img');im.src='img/'+n+'.jpg';im.alt=alt;im.className='in';im.style.objectPosition=pos;sl.appendChild(im);
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{im.className='on';cur.className='out'}));
-    setTimeout(()=>cur.remove(),1200);
-  },1800);
+  const cache={};pool.forEach(([n])=>{const i=new Image();i.decoding='async';i.src='img/'+n+'.jpg';cache[n]=i});
+  const slices=[...document.querySelectorAll('#slices .sl')];
+  const shown=()=>slices.map(sl=>{const i=sl.querySelector('img.on');return i?i.getAttribute('src').replace(/^img\/|\.jpg$/g,''):''});
+  let k=0,busy=false,visible=true;
+  const hero=document.getElementById('top');
+  if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(hero);
+  async function step(){
+    if(busy||document.hidden||!visible||document.body.classList.contains('intro-on'))return;
+    const vis=slices.filter(x=>x.offsetParent);if(!vis.length)return;
+    const sl=vis[k%vis.length];k++;
+    const cur=sl.querySelector('img.on');if(!cur)return;
+    const now=shown();const cand=pool.filter(([n])=>!now.includes(n)&&cache[n].complete&&cache[n].naturalWidth);
+    if(!cand.length)return;
+    const [n,alt,pos]=cand[Math.floor(Math.random()*cand.length)];
+    busy=true;
+    const im=document.createElement('img');im.alt=alt;im.style.objectPosition=pos;im.className='in';im.src='img/'+n+'.jpg';
+    try{await im.decode()}catch(_){}
+    sl.appendChild(im);void im.offsetWidth;
+    requestAnimationFrame(()=>{im.className='on';cur.className='out'});
+    setTimeout(()=>{cur.remove();sl.querySelectorAll('img:not(.on)').forEach(x=>x.remove());busy=false},1250);
+  }
+  setInterval(step,2000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden){busy=false;slices.forEach(sl=>{const imgs=sl.querySelectorAll('img');if(imgs.length>1){const on=sl.querySelector('img.on')||imgs[imgs.length-1];imgs.forEach(x=>{if(x!==on)x.remove()});on.className='on'}})}});
 })();
 
 /* cabecera + menú + sección activa */
