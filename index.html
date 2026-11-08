@@ -192,7 +192,7 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 .about p:last-of-type{margin-bottom:32px}
 .about p{font-size:clamp(18px,1.35vw,20px);color:var(--txt)}
 .about p+p{margin-top:14px}
-.about p b{color:var(--ink)}
+.about p b{color:var(--ink);background:linear-gradient(transparent 58%,var(--y) 58%,var(--y) 92%,transparent 92%);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .ficha{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
 .ficha div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule)}
 .ficha div:nth-child(odd){padding-right:18px}
@@ -302,7 +302,7 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 @media(max-width:520px){.why{grid-template-columns:1fr}}
 
 /* ---------- contacto ---------- */
-.cards{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.cards{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);max-width:900px;gap:var(--gap)}
 .card{background:var(--ink2);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
 .card .k{font-size:15px;color:var(--mute-d);font-weight:600}
 .card .v{font-size:clamp(19px,1.6vw,23px);font-weight:700;word-break:break-word}
@@ -484,8 +484,8 @@ footer a{color:var(--y)}
   </div>
 
   <div class="cta-box rv">
-    <div><h3 class="cond">¿Te interesa?</h3><p>Escríbenos o llámanos y te enviamos el dossier con toda la información de la temporada 2027, sin compromiso.</p></div>
-    <div class="acts"><a href="#contacto" class="btn b-y">Ver datos de contacto</a><a href="tel:+34654142444" class="btn b-o" style="color:#fff">Llamar: 654 142 444</a></div>
+    <div><h3 class="cond">¿Te interesa?</h3><p>Escríbenos por correo o Instagram y te enviamos el dossier con toda la información de la temporada 2027, sin compromiso.</p></div>
+    <div class="acts"><a href="#contacto" class="btn b-y">Ver datos de contacto</a><a href="mailto:damianalonsodruez@gmail.com" class="btn b-o" style="color:#fff">Enviar un correo</a></div>
   </div>
 </div></section>
 
@@ -496,7 +496,6 @@ footer a{color:var(--y)}
   <p class="intro rv">Para patrocinios, prensa o cualquier consulta.</p>
   <div class="cards">
     <div class="card rv"><span class="k">Correo electrónico</span><span class="v">damianalonsodruez@gmail.com</span><div class="row"><a class="btn b-y" href="mailto:damianalonsodruez@gmail.com">Enviar correo</a><button class="btn b-o cp" data-c="damianalonsodruez@gmail.com">Copiar</button></div></div>
-    <div class="card rv"><span class="k">Teléfono</span><span class="v">654 142 444</span><div class="row"><a class="btn b-y" href="tel:+34654142444">Llamar</a><button class="btn b-o cp" data-c="654142444">Copiar</button></div></div>
     <div class="card rv"><span class="k">Redes sociales</span><span class="v">@damianalonsodruez</span><div class="row"><a class="btn b-y" href="https://www.instagram.com/damianalonsodruez/" target="_blank" rel="noopener">Ver Instagram</a></div><span class="k" style="margin-top:6px">También en TikTok (@damianalonsodruez) y Facebook (Damian#20)</span></div>
   </div>
 </div>
