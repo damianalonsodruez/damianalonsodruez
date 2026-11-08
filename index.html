@@ -625,10 +625,10 @@ const Y=[
  {y:2023,t:'Salto a Moto5',d:'Primera temporada en la MIR Racing Cup.',i:'y2023-a',r:[['','7.º','MIR Racing Cup · Moto5']]},
  {y:2024,t:'Salto a Promo3',d:'Sube a una moto más grande en la MIR Racing Cup.',i:'y2024-a',r:[['','—','MIR Racing Cup · Promo3']]},
  {y:2025,t:'Campeón de Cataluña',d:'Gana el campeonato de Cataluña en SSP300.',i:'y2025-a',r:[['g','1.º','Campeonato de Cataluña SSP300'],['s','2.º','Carrera de 3 horas en Braga (Portugal)']]},
- {y:2026,t:'Copa de España SSP300',d:'Copa de España de Velocidad SSP300 con SRC Racing Team y debut en el Campeonato de España de Superbikes.',i:'ep-alb61',r:[['g','1.º','Jerez · Sprint y carrera'],['b','3.º','Albacete · Carrera'],['','4.º','Jerez II · Sprint'],['','Debut','Campeonato de España de Superbikes (ESBK)']],now:1},
+ {y:2026,t:'Copa de España SSP300',d:'Copa de España de Velocidad SSP300 con SRC Racing Team y debut en el Campeonato de España de Superbikes.',i:'y2026',pos:'55% 52%',r:[['g','1.º','Jerez · Sprint y carrera'],['b','3.º','Albacete · Carrera'],['','4.º','Jerez II · Sprint'],['','Debut','Campeonato de España de Superbikes (ESBK)']],now:1},
 ];
 const tr=$('#track');
-tr.innerHTML=Y.map(o=>`<article class="yr"><div class="photo"><img src="img/${o.i}.jpg" alt="Damián en ${o.y}"></div><div class="bd"><div class="yy">${o.y}</div><h4>${o.t}</h4><p>${o.d}</p><ul>${o.r.map(([c,p,t])=>`<li><span class="pos ${c}">${p}</span><span>${t}</span></li>`).join('')}</ul></div></article>`).join('');
+tr.innerHTML=Y.map(o=>`<article class="yr"><div class="photo"><img src="img/${o.i}.jpg" alt="Damián en ${o.y}" style="object-position:${o.pos||'50% 50%'}"></div><div class="bd"><div class="yy">${o.y}</div><h4>${o.t}</h4><p>${o.d}</p><ul>${o.r.map(([c,p,t])=>`<li><span class="pos ${c}">${p}</span><span>${t}</span></li>`).join('')}</ul></div></article>`).join('');
 $('#years').innerHTML=Y.map((o,k)=>`<button data-k="${k}">${o.y}</button>`).join('');
 const cards=$$('.yr'),yb=$$('#years button'),step=()=>cards[0].offsetWidth+16;
 function sync(){const end=tr.scrollLeft>=tr.scrollWidth-tr.clientWidth-4,k=end?cards.length-1:Math.min(cards.length-1,Math.round(tr.scrollLeft/step()));yb.forEach((b,j)=>b.classList.toggle('on',j===k))}
