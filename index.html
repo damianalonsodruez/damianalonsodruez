@@ -482,8 +482,9 @@ $('#tp').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});$('#tn').oncl
 setTimeout(sync,60);
 
 /* fotos */
-const G=['ep-jz10','g-a128','g-j25','g-j50','g-a97','g-j112','g-a136','pt-jz1','g-j133'];
-$('#grid').innerHTML=G.map(n=>`<div class="photo rv" data-z><img loading="lazy" src="img/${n}.jpg" alt="Damián Alonso"></div>`).join('');
+const G=['ep-jz10','hero-2','hero-4','esbk-lean','esbk-pit','esbk-helmet','alb-trophy','ep-alb271','esbk-team'];
+const GP={'hero-2':'50% 15%','hero-4':'50% 20%','esbk-helmet':'50% 35%','alb-trophy':'50% 25%','esbk-team':'60% 30%','esbk-pit':'50% 45%'};
+$('#grid').innerHTML=G.map(n=>`<div class="photo rv" data-z><img loading="lazy" src="img/${n}.jpg" alt="Damián Alonso" style="object-position:${GP[n]||'50% 50%'}"></div>`).join('');
 $$('#grid .rv').forEach(el=>io.observe(el));
 
 /* foto ampliada */
