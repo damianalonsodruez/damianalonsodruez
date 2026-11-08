@@ -63,16 +63,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* ---------- portada (franjas) ---------- */
 .hero{position:relative;height:100svh;min-height:680px;padding-top:72px;overflow:hidden;background:var(--y);color:var(--ink);display:flex;flex-direction:column}
 .hC{position:relative;flex:1;display:flex;flex-direction:column}
-.slices{position:relative;flex:1;min-height:0;display:flex;gap:10px;margin-inline:-6%}
-
-.sl{flex:1;overflow:hidden;transform:skewX(-10deg);transition:flex .8s var(--e);position:relative;clip-path:inset(100% 0 0 0);animation:up 1s var(--e) forwards}
+.slices{position:relative;flex:1;min-height:0;display:flex;--s:70px;--g:10px}
+.sl{flex:1;position:relative;overflow:hidden;margin-left:calc((var(--s) - var(--g)) * -1);clip-path:polygon(var(--s) 0,100% 0,calc(100% - var(--s)) 100%,0 100%);animation:up 1s var(--e) both;transition:flex .8s var(--e)}
+.sl:first-child{margin-left:0;clip-path:polygon(0 0,100% 0,calc(100% - var(--s)) 100%,0 100%)}
+.sl:last-child{clip-path:polygon(var(--s) 0,100% 0,100% 100%,0 100%)}
 .sl:nth-child(2){animation-delay:.1s}.sl:nth-child(3){animation-delay:.2s}.sl:nth-child(4){animation-delay:.3s}
-@keyframes up{to{clip-path:inset(0 0 0 0)}}
-.sl:hover{flex:2}
-.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:skewX(10deg) scale(1.3) translateY(0);transition:transform 1.1s cubic-bezier(.76,0,.24,1),filter 1.1s}
-.sl img.in{transform:skewX(10deg) scale(1.3) translateY(-105%)}
-.sl img.out{transform:skewX(10deg) scale(1.3) translateY(105%);filter:brightness(.4)}
-.sl:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.25));pointer-events:none}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.sl:hover{flex:1.6}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateY(0);transition:transform 1.1s cubic-bezier(.76,0,.24,1),filter 1.1s}
+.sl img.in{transform:translateY(-100%)}
+.sl img.out{transform:translateY(100%);filter:brightness(.4)}
 .cband{position:relative;flex:0 0 auto;padding-block:clamp(26px,4vh,44px) clamp(30px,5vh,52px)}
 .cb{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,64px);align-items:end}
 .ctag{display:inline-block;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--y);padding:6px 12px;border-radius:999px}
@@ -90,7 +90,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cright{padding-bottom:6px}
 @media(max-width:900px){
   .hero{height:auto;min-height:100svh}
-  .slices{flex:0 0 52svh;margin-inline:-18%;gap:8px}
+  .slices{flex:0 0 52svh;--s:40px;--g:8px}
+  .sl:nth-child(n+3){display:none}
+  .sl:nth-child(2){clip-path:polygon(var(--s) 0,100% 0,100% 100%,0 100%)}
   .cb{grid-template-columns:1fr;gap:20px}
   .cname{font-size:clamp(58px,17vw,96px)}
   .hero .btn{flex:1 1 100%}
@@ -262,10 +264,10 @@ footer a{color:var(--y)}
 
   <div class="hC">
     <div class="slices" id="slices">
-      <div class="sl"><img class="on" src="img/ep-alb272.jpg" alt="Damián tumbado en una curva en Albacete"></div>
-      <div class="sl"><img class="on" src="img/pt-jz131.jpg" alt="Damián con el casco, en blanco y negro"></div>
-      <div class="sl"><img class="on" src="img/h-a85.jpg" alt="Damián pasando junto al avión del circuito de Albacete"></div>
-      <div class="sl"><img class="on" src="img/h-j20.jpg" alt="Damián tumbado en Jerez"></div>
+      <div class="sl"><img class="on" src="img/ep-alb272.jpg" alt="Damián tumbado en una curva en Albacete" style="object-position:58% 50%"></div>
+      <div class="sl"><img class="on" src="img/pt-jz131.jpg" alt="Damián con el casco, en blanco y negro" style="object-position:42% 40%"></div>
+      <div class="sl"><img class="on" src="img/h-a85.jpg" alt="Damián pasando junto al avión del circuito de Albacete" style="object-position:52% 60%"></div>
+      <div class="sl"><img class="on" src="img/h-j20.jpg" alt="Damián tumbado en Jerez" style="object-position:60% 50%"></div>
     </div>
     <div class="cband">
       <div class="in-w cb">
@@ -430,14 +432,14 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
 
 /* portada: fotos que se deslizan y van cambiando */
 (function(){
-  const pool=[['ep-jz5','Damián en curva en Jerez'],['h-a240','Damián peleando con sus rivales en Albacete'],['esbk-start','Salida de la carrera en Jerez'],['h-j72','Damián de frente saliendo de una curva'],['h-j119','Damián con el casco puesto en el box'],['h-j92','Damián en pelea con otro piloto en Jerez'],['h-a185','Damián en la parrilla con el paraguas del equipo'],['h-j79','Damián tumbado en Jerez'],['ep-alb272','Damián tumbado en una curva en Albacete'],['pt-jz131','Damián con el casco, en blanco y negro'],['h-a85','Damián pasando junto al avión del circuito de Albacete'],['h-j20','Damián tumbado en Jerez']];
+  const pool=[['h-j72','Damián de frente saliendo de una curva','52% 55%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','55% 40%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 50%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','60% 50%']];
   pool.forEach(([n])=>{const i=new Image();i.src='img/'+n+'.jpg'});
   const slices=[...document.querySelectorAll('#slices .sl')];let next=0,k=0;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   setInterval(()=>{
-    const sl=slices[k%slices.length];k++;
-    const cur=sl.querySelector('img.on');const [n,alt]=pool[next%pool.length];next++;
-    const im=document.createElement('img');im.src='img/'+n+'.jpg';im.alt=alt;im.className='in';sl.appendChild(im);
+    const vis=slices.filter(x=>x.offsetParent);const sl=vis[k%vis.length];k++;
+    const cur=sl.querySelector('img.on');const [n,alt,pos]=pool[next%pool.length];next++;
+    const im=document.createElement('img');im.src='img/'+n+'.jpg';im.alt=alt;im.className='in';im.style.objectPosition=pos;sl.appendChild(im);
     requestAnimationFrame(()=>requestAnimationFrame(()=>{im.className='on';cur.className='out'}));
     setTimeout(()=>cur.remove(),1200);
   },1800);
