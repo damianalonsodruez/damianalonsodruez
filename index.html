@@ -270,17 +270,17 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 .why h4{font-size:20px;font-weight:800;line-height:1.2;margin-top:16px}
 .why p{font-size:16px;margin-top:6px;color:#2f2f18}
 .spots{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap) clamp(30px,5vw,72px);align-items:stretch}
-.spot-img{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden}
+.spot-img{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden}
 .spot-img img{width:100%;height:100%;object-fit:cover}
 .hot{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:var(--ink);color:var(--y);border:3px solid var(--y);display:grid;place-items:center;font-weight:800;font-size:17px;transition:transform .25s,background .25s,color .25s;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .hot.on,.hot:hover{transform:scale(1.18);background:var(--pink);color:#fff;border-color:#fff}
 .spot-list{list-style:none;display:grid;grid-auto-rows:1fr;gap:var(--gap)}
-.spot-list li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-content:center;align-items:center;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.45);cursor:pointer;transition:background .25s}
+.spot-list li{display:grid;grid-template-columns:40px 1fr;gap:16px;align-content:center;align-items:center;padding:14px 22px;border-radius:12px;background:rgba(255,255,255,.45);cursor:pointer;transition:background .25s}
 .spot-list li b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--y);font-weight:800}
 .spot-list li.on{background:#fff}
 .spot-list li.on b{background:var(--pink);color:#fff}
-.spot-list h5{font-size:19px;font-weight:800;line-height:1.3}
-.spot-list p{font-size:16px;color:#33331c}
+.spot-list h5{font-size:19px;font-weight:800;line-height:1.25;margin-bottom:2px}
+.spot-list p{font-size:15.5px;line-height:1.45;color:#33331c}
 .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
 .tier{background:var(--ink);color:#fff;border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;gap:14px}
 .tier.main{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 3px var(--ink)}
@@ -449,11 +449,11 @@ footer a{color:var(--y)}
     <p class="sub-intro rv">Pulsa los números de la foto o de la lista para ver cada espacio.</p>
     <div class="spots">
       <div class="spot-img rv">
-        <img src="img/esbk-front.jpg" alt="Damián con su moto en pista">
-        <button class="hot" style="left:50%;top:74%" data-s="0" aria-label="Espacio 1">1</button>
-        <button class="hot" style="left:62%;top:53%" data-s="1" aria-label="Espacio 2">2</button>
-        <button class="hot" style="left:72%;top:43%" data-s="2" aria-label="Espacio 3">3</button>
-        <button class="hot" style="left:24%;top:24%" data-s="3" aria-label="Espacio 4">4</button>
+        <img src="img/esbk-front-sq.jpg" alt="Damián con su moto en pista">
+        <button class="hot" style="left:47%;top:66%" data-s="0" aria-label="Espacio 1">1</button>
+        <button class="hot" style="left:58%;top:41%" data-s="1" aria-label="Espacio 2">2</button>
+        <button class="hot" style="left:70%;top:29%" data-s="2" aria-label="Espacio 3">3</button>
+        <button class="hot" style="left:36%;top:58%" data-s="3" aria-label="Espacio 4">4</button>
       </div>
       <ul class="spot-list" id="spotlist">
         <li data-s="0"><b>1</b><div><h5>En la moto</h5><p>Es el sitio que más se ve: en la pista, en las fotos y en los vídeos.</p></div></li>
