@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Damián Alonso #11 · Piloto de velocidad</title>
+<meta name="description" content="Damián Alonso Druez, piloto de velocidad de 15 años. SSP300 Copa de España y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<link rel="icon" type="image/png" href="img/avispa.png">
+<meta property="og:title" content="Damián Alonso #11 · Piloto de velocidad">
+<meta property="og:description" content="Piloto de motociclismo de 15 años. SSP300 y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<meta property="og:image" content="https://damianalonsodruez.com/img/ep-alb272.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1f0eb;--paper2:#e6e5df;--ink:#111113;--ink2:#1b1b1f;--txt:#3c3c43;--mute:#6b6b73;--mute-d:#a9a9b0;
+  --y:#e4f21b;--pink:#ff2e88;--rule:rgba(17,17,19,.14);--rule-d:rgba(255,255,255,.14);
+  --pad:clamp(20px,4vw,64px);--max:1240px;--gap:16px;--e:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--paper);color:var(--ink);overflow-x:clip}
+body{font-family:"Archivo",system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--y);color:var(--ink)}
+.in-w{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.dark{background:var(--ink);color:var(--paper)}
+.cond{font-stretch:68%;font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.005em}
+
+/* reveal (suave) */
+.rv{opacity:1}
+.rv.in{opacity:1;transform:none}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:17px;transition:background .25s,color .25s,box-shadow .25s;white-space:nowrap}
+.btn svg{width:14px}
+.b-y{background:var(--y);color:var(--ink)}
+.b-y:hover{background:#fff}
+.b-k{background:var(--ink);color:#fff}
+.b-k:hover{background:var(--pink)}
+.b-o{box-shadow:inset 0 0 0 2px currentColor}
+.b-o:hover{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px #fff}
+.btn.sm{min-height:44px;padding:0 20px;font-size:15px}
+
+/* ---------- cabecera ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:72px;color:#fff;background:#111113;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.hdr .in-w{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:36px}
+.logo b{font-family:"Lilita One";font-weight:400;font-size:22px;color:var(--y);text-shadow:1.5px 1.5px 0 #000;letter-spacing:.02em}
+.nav{display:flex;gap:4px}
+.nav a{font-size:16px;font-weight:600;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nav a:hover,.nav a.on{background:var(--y);color:var(--ink)}
+.burger{display:none;align-items:center;gap:8px;font-weight:700;font-size:16px;padding:10px 16px;border-radius:999px;box-shadow:inset 0 0 0 2px currentColor}
+#menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:none;flex-direction:column;justify-content:center;gap:6px;padding:var(--pad)}
+#menu.on{display:flex}
+#menu a{font-size:34px;font-weight:700;padding:8px 0;border-bottom:1px solid var(--rule-d)}
+@media(max-width:1060px){.nav{display:none}.burger{display:inline-flex}.hdr .b-y{display:none}}
+
+/* ---------- portada (franjas) ---------- */
+.hero{position:relative;height:100svh;min-height:680px;padding-top:72px;overflow:hidden;background:var(--y);color:var(--ink);display:flex;flex-direction:column}
+.hC{position:relative;flex:1;display:flex;flex-direction:column}
+.slices{position:relative;flex:1;min-height:0;display:flex;gap:10px;margin-inline:-6%}
+
+.sl{flex:1;overflow:hidden;transform:skewX(-10deg);transition:flex .8s var(--e);position:relative;clip-path:inset(100% 0 0 0);animation:up 1s var(--e) forwards}
+.sl:nth-child(2){animation-delay:.1s}.sl:nth-child(3){animation-delay:.2s}.sl:nth-child(4){animation-delay:.3s}
+@keyframes up{to{clip-path:inset(0 0 0 0)}}
+.sl:hover{flex:2}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:skewX(10deg) scale(1.3)}
+.cband{position:relative;flex:0 0 auto;padding-block:clamp(26px,4vh,44px) clamp(30px,5vh,52px)}
+.cb{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,64px);align-items:end}
+.ctag{display:inline-block;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--y);padding:6px 12px;border-radius:999px}
+.cname{margin-top:26px;padding-top:.06em;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(64px,8.2vw,136px);line-height:.86;letter-spacing:-.01em;opacity:0;transform:translateY(30px);animation:rise .9s var(--e) .45s forwards}
+.cname .p{color:var(--pink)}
+@keyframes rise{to{opacity:1;transform:none}}
+.cmeta{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.cmeta span{font-size:15px;font-weight:700;padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 2px var(--ink)}
+.cmeta span:first-child{background:var(--ink);color:#fff}
+.hero .lead{font-size:clamp(17px,1.35vw,20px);color:#24240e;line-height:1.5}
+.hero .lead b{color:var(--ink)}
+.hero .ctas{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+.b-line{box-shadow:inset 0 0 0 2px var(--ink);color:var(--ink)}
+.b-line:hover{background:var(--ink);color:#fff}
+.cright{padding-bottom:6px}
+@media(max-width:900px){
+  .hero{height:auto;min-height:100svh}
+  .slices{flex:0 0 52svh;margin-inline:-18%;gap:8px}
+  .cb{grid-template-columns:1fr;gap:20px}
+  .cname{font-size:clamp(58px,17vw,96px)}
+  .hero .btn{flex:1 1 100%}
+}
+
+/* ---------- datos clave ---------- */
+.facts{background:var(--ink);color:#fff}
+.facts .in-w{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:28px 22px;border-left:1px solid var(--rule-d)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font-stretch:68%;font-weight:800;font-size:clamp(44px,4.6vw,68px);line-height:1;color:var(--y)}
+.fact span{display:block;margin-top:6px;font-size:16px;color:#e2e2e5}
+@media(max-width:760px){.facts .in-w{grid-template-columns:1fr 1fr}.fact{padding:22px 0 22px 18px}.fact:nth-child(odd){border-left:0;padding-left:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--rule-d)}}
+
+/* ---------- secciones ---------- */
+.sec{padding-block:clamp(72px,9vw,128px)}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--pink);margin-bottom:14px}
+.label b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--pink);color:#fff;font-size:13px;letter-spacing:0}
+.dark .label{color:var(--y)}.dark .label b{background:var(--y);color:var(--ink)}
+.title{font-size:clamp(38px,4.6vw,68px);max-width:900px}
+.intro{margin-top:16px;font-size:clamp(18px,1.4vw,21px);color:var(--txt);max-width:720px}
+.dark .intro{color:#cfcfd4}
+.sub-title{font-size:clamp(26px,2.4vw,34px);margin-bottom:8px}
+.sub-intro{color:var(--txt);margin-bottom:24px;max-width:640px}
+.help{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--mute);margin-top:10px}
+.dark .help{color:var(--mute-d)}
+
+/* ---------- quién es ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap) clamp(36px,5vw,72px);align-items:center;margin-top:40px}
+.about>.rv:first-child{display:flex;flex-direction:column}
+.about .ficha{margin-top:0}
+.about p:last-of-type{margin-bottom:32px}
+.about p{font-size:clamp(18px,1.35vw,20px);color:var(--txt)}
+.about p+p{margin-top:14px}
+.about p b{color:var(--ink)}
+.ficha{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.ficha div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.ficha div:nth-child(odd){padding-right:18px}
+.ficha div:nth-child(even){padding-left:18px;border-left:1px solid var(--rule)}
+.ficha dt{color:var(--mute)}
+.ficha dd{font-weight:700;text-align:right}
+.photo{position:relative;border-radius:14px;overflow:hidden;background:#ddd}
+.photo img{width:100%;height:100%;object-fit:cover}
+.about .photo{aspect-ratio:1/1;width:100%}
+.pcap{position:absolute;left:12px;bottom:12px;background:rgba(17,17,19,.8);color:#fff;font-size:14px;padding:6px 12px;border-radius:999px}
+@media(max-width:900px){.about{grid-template-columns:1fr}.about .photo{order:-1;min-height:0;height:auto;aspect-ratio:4/5}.ficha{grid-template-columns:1fr}.ficha div:nth-child(even){padding-left:0;border-left:0}.ficha div:nth-child(odd){padding-right:0}}
+
+/* ---------- 2026 ---------- */
+.season{background:var(--paper2)}
+.races{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.race{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--rule)}
+.race .photo{border-radius:0;aspect-ratio:4/3;cursor:zoom-in}
+.race .bd{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.race .when{font-size:14px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.race h3{font-stretch:75%;font-weight:800;font-size:30px;text-transform:uppercase;line-height:1.05;margin-top:4px}
+.race p{color:var(--txt);margin:8px 0 16px;font-size:17px}
+.result{display:inline-block;margin-top:auto;font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;background:var(--y);color:var(--ink)}
+.result.pink{background:var(--pink);color:#fff}
+.result.grey{background:var(--paper2);color:var(--ink)}
+@media(max-width:900px){.races{grid-template-columns:1fr}}
+
+/* ---------- trayectoria ---------- */
+.tl-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.arr{display:flex;gap:10px}
+.arr button{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;box-shadow:inset 0 0 0 2px var(--rule-d);font-weight:700;font-size:15px;transition:all .2s}
+.arr button:hover{background:var(--y);color:var(--ink);box-shadow:none}
+.arr svg{width:14px}
+.years{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px}
+.years button{min-height:42px;padding:0 16px;border-radius:999px;font-weight:700;font-size:15px;box-shadow:inset 0 0 0 1.5px var(--rule-d);color:#d9d9dd;transition:all .2s}
+.years button:hover{box-shadow:inset 0 0 0 1.5px var(--y)}
+.years button.on{background:var(--y);color:var(--ink);box-shadow:none}
+.track{margin-top:24px;display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.track::-webkit-scrollbar{display:none}
+.yr{flex:0 0 calc((100% - 2*var(--gap))/3);scroll-snap-align:start;background:var(--ink2);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.yr .photo{border-radius:0;aspect-ratio:4/3}
+.yr .bd{padding:20px 22px 24px}
+.yr .yy{font-stretch:68%;font-weight:800;font-size:40px;line-height:1;color:var(--y)}
+.yr h4{font-size:21px;font-weight:700;margin-top:6px}
+.yr p{color:var(--mute-d);font-size:16px;margin-top:4px}
+.yr ul{list-style:none;margin-top:14px}
+.yr li{display:flex;gap:12px;align-items:baseline;font-size:16px;padding:9px 0;border-top:1px solid var(--rule-d)}
+.pos{flex:0 0 auto;min-width:48px;text-align:center;font-weight:800;font-size:14px;padding:2px 8px;border-radius:6px;background:rgba(255,255,255,.12)}
+.pos.g{background:var(--y);color:var(--ink)}.pos.s{background:#d6d8dd;color:var(--ink)}.pos.b{background:#d39457;color:var(--ink)}
+.legend{margin-top:22px;display:flex;flex-wrap:wrap;gap:18px;font-size:15px;color:var(--mute-d)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+@media(max-width:900px){.yr{flex-basis:calc((100% - var(--gap))/2)}}
+@media(max-width:700px){.yr{flex-basis:84%}.arr button span{display:none}}
+
+/* ---------- fotos ---------- */
+.grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,17vw,250px);gap:var(--gap)}
+.grid .photo{cursor:zoom-in;border-radius:10px}
+.grid .photo:nth-child(1){grid-column:span 2;grid-row:span 2}
+.grid .photo img{transition:transform 1s var(--e)}
+.grid .photo:hover img{transform:scale(1.04)}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr;grid-auto-rows:38vw}}
+#lb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);display:none;place-items:center;padding:20px}
+#lb.on{display:grid}
+#lb img{max-width:94vw;max-height:84vh;border-radius:6px}
+#lb button{position:absolute;top:18px;right:18px;background:#fff;color:var(--ink);font-weight:700;font-size:16px;min-height:46px;padding:0 20px;border-radius:999px}
+
+/* ---------- patrocinio ---------- */
+.spon{background:var(--y)}
+.spon .label{color:var(--ink)}.spon .label b{background:var(--ink);color:var(--y)}
+.spon .intro,.spon .sub-intro{color:#26260f}
+.block{margin-top:clamp(56px,6vw,90px)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.why div{background:rgba(255,255,255,.55);border-radius:14px;padding:24px 22px}
+.why .ico{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--y);display:grid;place-items:center;font-weight:800}
+.why h4{font-size:20px;font-weight:800;line-height:1.2;margin-top:16px}
+.why p{font-size:16px;margin-top:6px;color:#2f2f18}
+.spots{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap) clamp(30px,5vw,72px);align-items:stretch}
+.spot-img{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden}
+.spot-img img{width:100%;height:100%;object-fit:cover}
+.hot{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:var(--ink);color:var(--y);border:3px solid var(--y);display:grid;place-items:center;font-weight:800;font-size:17px;transition:transform .25s,background .25s,color .25s;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.hot.on,.hot:hover{transform:scale(1.18);background:var(--pink);color:#fff;border-color:#fff}
+.spot-list{list-style:none;display:grid;grid-auto-rows:1fr;gap:var(--gap)}
+.spot-list li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-content:center;align-items:center;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.45);cursor:pointer;transition:background .25s}
+.spot-list li b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--y);font-weight:800}
+.spot-list li.on{background:#fff}
+.spot-list li.on b{background:var(--pink);color:#fff}
+.spot-list h5{font-size:19px;font-weight:800;line-height:1.3}
+.spot-list p{font-size:16px;color:#33331c}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.tier{background:var(--ink);color:#fff;border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;gap:14px}
+.tier.main{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 3px var(--ink)}
+.tier .badge{align-self:flex-start;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:999px;background:var(--y);color:var(--ink)}
+.tier.main .badge{background:var(--pink);color:#fff}
+.tier h4{font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:28px;line-height:1.05}
+.tier ul{list-style:none;display:grid;gap:10px;font-size:16px}
+.tier li{display:flex;gap:10px}
+.tier li:before{content:"✓";font-weight:800;color:var(--y)}
+.tier.main li:before{color:var(--pink)}
+.logos{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap)}
+.logos div{min-height:96px;display:grid;place-items:center;text-align:center;padding:12px;border-radius:12px;background:#fff;font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(17px,1.5vw,22px);line-height:1.1}
+.logos div.free{background:transparent;border:2px dashed rgba(17,17,19,.35);font-stretch:100%;font-weight:600;text-transform:none;font-size:16px;color:#3a3a20}
+.cta-box{margin-top:clamp(56px,6vw,90px);background:var(--ink);color:#fff;border-radius:18px;padding:clamp(28px,4vw,50px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.cta-box h3{font-size:clamp(30px,3vw,44px)}
+.cta-box p{color:#d6d6da;margin-top:10px}
+.cta-box .acts{display:flex;flex-direction:column;gap:10px}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}.spots{grid-template-columns:1fr}.spot-list{grid-auto-rows:auto}.tiers{grid-template-columns:1fr}.logos{grid-template-columns:1fr 1fr}.cta-box{grid-template-columns:1fr}}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+
+/* ---------- contacto ---------- */
+.cards{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.card{background:var(--ink2);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.card .k{font-size:15px;color:var(--mute-d);font-weight:600}
+.card .v{font-size:clamp(19px,1.6vw,23px);font-weight:700;word-break:break-word}
+.card .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.card .btn{min-height:44px;font-size:15px;padding:0 18px}
+.card .b-o{box-shadow:inset 0 0 0 2px var(--rule-d)}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+footer{margin-top:clamp(60px,7vw,100px);border-top:1px solid var(--rule-d);padding-block:24px;font-size:15px;color:var(--mute-d)}
+footer .in-w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--y)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr"><div class="in-w">
+  <a href="#top" class="logo" aria-label="Inicio"><img src="img/avispa.png" alt=""><b>DAMIAN #11</b></a>
+  <nav class="nav" id="nav"><a href="#quien">Quién es</a><a href="#temporada">Temporada 2026</a><a href="#trayectoria">Trayectoria</a><a href="#fotos">Fotos</a><a href="#patrocinar">Patrocinar</a><a href="#contacto">Contacto</a></nav>
+  <div style="display:flex;gap:10px;align-items:center"><a href="#patrocinar" class="btn b-y sm">Quiero patrocinar</a><button class="burger" id="burger" aria-expanded="false">☰ Menú</button></div>
+</div></header>
+<div id="menu"><a href="#quien">Quién es</a><a href="#temporada">Temporada 2026</a><a href="#trayectoria">Trayectoria</a><a href="#fotos">Fotos</a><a href="#patrocinar">Patrocinar</a><a href="#contacto">Contacto</a></div>
+
+<!-- PORTADA -->
+<section class="hero" id="top">
+
+  <div class="hC">
+    <div class="slices">
+      <div class="sl"><img src="img/ep-alb272.jpg" alt="Damián tumbado en una curva en Albacete" style="object-position:62% 50%"></div>
+      <div class="sl"><img src="img/pt-jz131.jpg" alt="Damián con el casco puesto, de perfil" style="object-position:50% 40%"></div>
+      <div class="sl"><img src="img/esbk-start.jpg" alt="Salida de la carrera en Jerez" style="object-position:50% 70%"></div>
+      <div class="sl"><img src="img/alb-portrait.jpg" alt="Retrato de Damián con su casco" style="object-position:50% 22%"></div>
+    </div>
+    <div class="cband">
+      <div class="in-w cb">
+        <div class="cleft">
+          <span class="ctag">Piloto de motociclismo · 15 años</span>
+          <h1 class="cname">Damián <span class="p">Alonso</span></h1>
+          <p class="cmeta"><span>#11</span><span>SSP300</span><span>SRC Racing Team</span></p>
+        </div>
+        <div class="cright">
+          <p class="lead">Campeón de Cataluña 2025 y debutante en el Campeonato de España 2026.<br><b>Busca patrocinadores para la temporada 2027.</b></p>
+          <div class="ctas"><a href="#patrocinar" class="btn b-k">Quiero patrocinar <svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg></a><a href="#quien" class="btn b-line">Conocer a Damián</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DATOS CLAVE -->
+<div class="facts"><div class="in-w">
+  <div class="fact"><b>15</b><span>años de edad</span></div>
+  <div class="fact"><b>10</b><span>temporadas compitiendo</span></div>
+  <div class="fact"><b>4</b><span>campeonatos ganados</span></div>
+  <div class="fact"><b>2</b><span>victorias en la Copa de España 2026</span></div>
+</div></div>
+
+<!-- QUIÉN ES -->
+<section class="sec" id="quien"><div class="in-w">
+  <div class="label"><b>1</b>Quién es Damián</div>
+  <h2 class="title cond rv">Un piloto joven con diez años de experiencia</h2>
+  <div class="about">
+    <div class="rv">
+      <p>Damián empezó a montar en moto con <b>5 años</b> en la Lorenzo Zamora School y a los 6 ya competía en Minimotos.</p>
+      <p>Desde entonces ha ido subiendo de categoría cada temporada: Mini GP, Moto5, Promo3 y ahora <b>SSP300</b>, con el equipo <b>SRC Racing Team</b>. En 2026 ha luchado por ganar la Copa de España y ha debutado en el <b>Campeonato de España (ESBK)</b>.</p>
+      <dl class="ficha">
+        <div><dt>Nacimiento</dt><dd>20/10/2011</dd></div>
+        <div><dt>Ciudad</dt><dd>Toro (Zamora)</dd></div>
+        <div><dt>Equipo</dt><dd>SRC Racing Team</dd></div>
+        <div><dt>Moto</dt><dd>Yamaha R3</dd></div>
+        <div><dt>Categoría</dt><dd>SSP300</dd></div>
+        <div><dt>Dorsal</dt><dd>11 (20 en la Copa)</dd></div>
+      </dl>
+    </div>
+    <div class="photo rv"><img src="img/alb-trophy.jpg" alt="Damián con su trofeo delante de la lona del equipo SRC" style="object-position:50% 22%"><span class="pcap">Damián con su trofeo, 2026</span></div>
+  </div>
+</div></section>
+
+<!-- 2026 -->
+<section class="sec season" id="temporada"><div class="in-w">
+  <div class="label"><b>2</b>Temporada 2026</div>
+  <h2 class="title cond rv">Así ha ido este año</h2>
+  <p class="intro rv">Ha ganado dos carreras y ha llegado a ir líder de la Copa de España a falta de dos carreras. Además, ha corrido por primera vez en el Campeonato de España.</p>
+  <div class="races">
+    <article class="race rv"><div class="photo" data-z><img src="img/alb-podium.jpg" alt="Damián en el podio de Albacete" style="object-position:50% 40%"></div><div class="bd"><span class="when">Copa de España</span><h3>Albacete</h3><p>Terminó en tercera posición y subió al podio.</p><span class="result">3.º · Podio</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/esbk-grid.jpg" alt="Damián en la parrilla de salida en Jerez" style="object-position:50% 35%"></div><div class="bd"><span class="when">Campeonato de España (ESBK)</span><h3>Jerez</h3><p>Su primera carrera en el Campeonato de España, en el circuito de Jerez.</p><span class="result pink">Debut</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/pt-jz129.jpg" alt="Damián con el casco puesto" style="object-position:50% 30%"></div><div class="bd"><span class="when">Copa de España · Última carrera</span><h3>Navarra</h3><p>La carrera final del año, donde se decide el campeón de la Copa.</p><span class="result grey">Resultado final</span></div></article>
+  </div>
+</div></section>
+
+<!-- TRAYECTORIA -->
+<section class="sec dark" id="trayectoria"><div class="in-w">
+  <div class="tl-top">
+    <div><div class="label"><b>3</b>Trayectoria</div><h2 class="title cond rv">Su carrera, año a año</h2><p class="intro rv">Todos sus resultados desde que empezó a competir en 2017.</p></div>
+    <div class="arr"><button id="tp" aria-label="Año anterior"><svg viewBox="0 0 14 14"><path d="M13 7H1M6 2L1 7l5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg><span>Anterior</span></button><button id="tn" aria-label="Año siguiente"><span>Siguiente</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg></button></div>
+  </div>
+  <div class="years" id="years" aria-label="Elegir año"></div>
+  <p class="help">Pulsa un año, usa las flechas o desliza las tarjetas hacia los lados.</p>
+  <div class="track" id="track"></div>
+  <div class="legend"><span><i class="pos g">1.º</i>Campeón / ganador</span><span><i class="pos s">2.º</i>Segundo</span><span><i class="pos b">3.º</i>Tercero</span></div>
+</div></section>
+
+<!-- FOTOS -->
+<section class="sec" id="fotos"><div class="in-w">
+  <div class="label"><b>4</b>Fotos</div>
+  <h2 class="title cond rv">Damián en pista</h2>
+  <p class="intro rv">Pulsa cualquier foto para verla en grande.</p>
+  <div class="grid" id="grid"></div>
+</div></section>
+<div id="lb" role="dialog" aria-label="Foto ampliada"><img alt=""><button id="lbc">Cerrar ✕</button></div>
+
+<!-- PATROCINAR -->
+<section class="sec spon" id="patrocinar"><div class="in-w">
+  <div class="label"><b>5</b>Patrocinar · Temporada 2027</div>
+  <h2 class="title cond rv">¿Por qué patrocinar a Damián?</h2>
+  <p class="intro rv">Damián busca empresas que le acompañen la próxima temporada. A cambio, tu marca aparece en su moto, en su ropa de carreras y en todas sus fotos y redes sociales.</p>
+
+  <div class="block">
+    <div class="why">
+      <div class="rv"><span class="ico">1</span><h4>Se ve en los circuitos</h4><p>Tu marca estará en carreras en Jerez, Albacete, Navarra y otros circuitos de España.</p></div>
+      <div class="rv"><span class="ico">2</span><h4>Fotos y vídeos profesionales</h4><p>En cada carrera se hacen fotos y vídeos con tu marca, que puedes usar en tu negocio.</p></div>
+      <div class="rv"><span class="ico">3</span><h4>Presencia en redes sociales</h4><p>Publicaciones y menciones en el Instagram, TikTok y Facebook de Damián.</p></div>
+      <div class="rv"><span class="ico">4</span><h4>Una imagen positiva</h4><p>Asocia tu empresa al esfuerzo, la juventud y el deporte.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3 class="sub-title cond rv">¿Dónde aparecerá tu marca?</h3>
+    <p class="sub-intro rv">Pulsa los números de la foto o de la lista para ver cada espacio.</p>
+    <div class="spots">
+      <div class="spot-img rv">
+        <img src="img/esbk-front.jpg" alt="Damián con su moto en pista">
+        <button class="hot" style="left:50%;top:74%" data-s="0" aria-label="Espacio 1">1</button>
+        <button class="hot" style="left:62%;top:53%" data-s="1" aria-label="Espacio 2">2</button>
+        <button class="hot" style="left:72%;top:43%" data-s="2" aria-label="Espacio 3">3</button>
+        <button class="hot" style="left:24%;top:24%" data-s="3" aria-label="Espacio 4">4</button>
+      </div>
+      <ul class="spot-list" id="spotlist">
+        <li data-s="0"><b>1</b><div><h5>En la moto</h5><p>Es el sitio que más se ve: en la pista, en las fotos y en los vídeos.</p></div></li>
+        <li data-s="1"><b>2</b><div><h5>En el mono de carreras</h5><p>En el pecho, los brazos o la espalda. Sale en todas las fotos del box, la salida y el podio.</p></div></li>
+        <li data-s="2"><b>3</b><div><h5>En el casco</h5><p>Se ve de cerca en entrevistas y retratos.</p></div></li>
+        <li data-s="3"><b>4</b><div><h5>En el box, la ropa y las redes</h5><p>Gorra, camiseta, carpa, paraguas de salida y publicaciones en redes sociales.</p></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3 class="sub-title cond rv">Formas de colaborar</h3>
+    <p class="sub-intro rv">Hay tres niveles. Hablamos contigo y lo adaptamos a lo que necesite tu empresa.</p>
+    <div class="tiers">
+      <div class="tier main rv"><span class="badge">Nivel 1</span><h4>Patrocinador principal</h4><ul><li>El espacio más grande en la moto y el mono</li><li>Tu nombre unido al proyecto</li><li>Fotos y vídeos exclusivos para tu marca</li><li>Publicaciones destacadas en redes</li><li>Eventos y acciones con tu empresa</li></ul></div>
+      <div class="tier rv"><span class="badge">Nivel 2</span><h4>Patrocinador oficial</h4><ul><li>Tu logo en la moto y el mono</li><li>Publicaciones en cada carrera</li><li>Fotos de la temporada para tu marca</li><li>Tu logo en esta web</li></ul></div>
+      <div class="tier rv"><span class="badge">Nivel 3</span><h4>Colaborador</h4><ul><li>Tu logo en la moto o la ropa</li><li>Menciones en redes sociales</li><li>Tu logo en esta web</li><li>Puedes colaborar con producto o servicios</li></ul></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3 class="sub-title cond rv">Marcas que ya le apoyan</h3>
+    <p class="sub-intro rv">Los huecos libres pueden ser para tu empresa.</p>
+    <div class="logos rv">
+      <div>SRC Racing Team</div><div>Yamaha</div><div>Caberg</div><div>Karting Tordesillas</div><div>JATI</div>
+      <div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div>
+    </div>
+  </div>
+
+  <div class="cta-box rv">
+    <div><h3 class="cond">¿Te interesa?</h3><p>Escríbenos o llámanos y te enviamos el dossier con toda la información de la temporada 2027, sin compromiso.</p></div>
+    <div class="acts"><a href="#contacto" class="btn b-y">Ver datos de contacto</a><a href="tel:+34654142444" class="btn b-o" style="color:#fff">Llamar: 654 142 444</a></div>
+  </div>
+</div></section>
+
+<!-- CONTACTO -->
+<section class="sec dark" id="contacto" style="padding-bottom:0"><div class="in-w">
+  <div class="label"><b>6</b>Contacto</div>
+  <h2 class="title cond rv">Hablemos</h2>
+  <p class="intro rv">Para patrocinios, prensa o cualquier consulta.</p>
+  <div class="cards">
+    <div class="card rv"><span class="k">Correo electrónico</span><span class="v">damianalonsodruez@gmail.com</span><div class="row"><a class="btn b-y" href="mailto:damianalonsodruez@gmail.com">Enviar correo</a><button class="btn b-o cp" data-c="damianalonsodruez@gmail.com">Copiar</button></div></div>
+    <div class="card rv"><span class="k">Teléfono</span><span class="v">654 142 444</span><div class="row"><a class="btn b-y" href="tel:+34654142444">Llamar</a><button class="btn b-o cp" data-c="654142444">Copiar</button></div></div>
+    <div class="card rv"><span class="k">Redes sociales</span><span class="v">@damianalonsodruez</span><div class="row"><a class="btn b-y" href="https://www.instagram.com/damianalonsodruez/" target="_blank" rel="noopener">Ver Instagram</a></div><span class="k" style="margin-top:6px">También en TikTok (@damianalonsodruez) y Facebook (Damian#20)</span></div>
+  </div>
+</div>
+<footer><div class="in-w"><span>© 2026 Damián Alonso Druez · #11</span><span>Web y fotografía: <a href="https://www.instagram.com/danidfx/" target="_blank" rel="noopener">@danidfx</a></span></div></footer>
+</section>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* al recargar, siempre al inicio */
+try{history.scrollRestoration='manual'}catch(_){}
+if(location.hash){try{history.replaceState(null,'',location.pathname+location.search)}catch(_){}}
+scrollTo(0,0);addEventListener('load',()=>scrollTo(0,0));addEventListener('pageshow',()=>scrollTo(0,0));
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();const id=a.getAttribute('href').slice(1);const t=id==='top'?document.body:document.getElementById(id);if(!t)return;const y=id==='top'?0:t.getBoundingClientRect().top+scrollY-72;scrollTo({top:y,behavior:'smooth'})});
+
+/* cabecera + menú + sección activa */
+const hdr=$('#hdr');
+
+$('#burger').onclick=()=>{const o=$('#menu').classList.toggle('on');$('#burger').textContent=o?'✕ Cerrar':'☰ Menú';$('#burger').setAttribute('aria-expanded',o);};
+$$('#menu a').forEach(a=>a.onclick=()=>$('#burger').click());
+const secs=['quien','temporada','trayectoria','fotos','patrocinar','contacto'].map(id=>document.getElementById(id));
+const navIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('#nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>navIO.observe(s));
+
+/* aparición suave */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* trayectoria */
+const Y=[
+ {y:2017,t:'Primeras carreras',d:'Con 6 años empieza a competir en Minimotos.',i:'y2017-b',r:[['','—','Copa de España de iniciación (Mini Moto 4.2)']]},
+ {y:2018,t:'Primer podio',d:'Queda segundo en Castilla y León.',i:'y2018-a',r:[['s','2.º','Campeonato de Castilla y León Mini Moto 4.2'],['','—','Copa de España Mini Moto 4.2']]},
+ {y:2019,t:'Segundo otra vez',d:'Repite subcampeonato en Castilla y León.',i:'y2019-a',r:[['s','2.º','Campeonato de Castilla y León Mini Moto 4.2'],['','5.º','Carrera de Campeones ANPA']]},
+ {y:2020,t:'Cuna de Campeones',d:'Tercero en Castilla y León.',i:'y2020-a',r:[['b','3.º','Campeonato de Castilla y León Mini Moto 4.2'],['','14.º','Cuna de Campeones Mini Moto 4.2']]},
+ {y:2021,t:'Sus primeros títulos',d:'Pasa a Mini GP y gana dos campeonatos.',i:'y2021-a',r:[['g','1.º','Campeonato de Castilla y León Mini GP'],['g','1.º','Cup Dani Rivas Mini GP'],['s','2.º','Campeonato de Castilla y León Minimotard'],['','10.º','Copa de España Mini GP']]},
+ {y:2022,t:'Campeón de Mini GP eléctrica',d:'Gana el campeonato y es segundo en dos pruebas de selección nacionales.',i:'y2022-a',r:[['g','1.º','Campeonato Mini GP eléctrica'],['s','2.º','Prueba de selección Cuna de Campeones'],['s','2.º','Prueba de selección FIM MiniGP Spain'],['','8.º','FIM MiniGP World Series Spain']]},
+ {y:2023,t:'Salto a Moto5',d:'Primera temporada en la MIR Racing Cup.',i:'y2023-a',r:[['','7.º','MIR Racing Cup · Moto5']]},
+ {y:2024,t:'Salto a Promo3',d:'Sube a una moto más grande en la MIR Racing Cup.',i:'y2024-a',r:[['','—','MIR Racing Cup · Promo3']]},
+ {y:2025,t:'Campeón de Cataluña',d:'Gana el campeonato de Cataluña en SSP300.',i:'y2025-a',r:[['g','1.º','Campeonato de Cataluña SSP300'],['s','2.º','Carrera de 3 horas en Braga (Portugal)']]},
+ {y:2026,t:'Copa de España y ESBK',d:'Lucha por la Copa de España y debuta en el Campeonato de España.',i:'ep-alb61',r:[['g','1.º','Dos victorias en la Copa de España SSP300'],['b','3.º','Podio en Albacete'],['','Debut','Campeonato de España (ESBK) en Jerez']]},
+];
+const tr=$('#track');
+tr.innerHTML=Y.map(o=>`<article class="yr"><div class="photo"><img src="img/${o.i}.jpg" alt="Damián en ${o.y}"></div><div class="bd"><div class="yy">${o.y}</div><h4>${o.t}</h4><p>${o.d}</p><ul>${o.r.map(([c,p,t])=>`<li><span class="pos ${c}">${p}</span><span>${t}</span></li>`).join('')}</ul></div></article>`).join('');
+$('#years').innerHTML=Y.map((o,k)=>`<button data-k="${k}">${o.y}</button>`).join('');
+const cards=$$('.yr'),yb=$$('#years button'),step=()=>cards[0].offsetWidth+16;
+function sync(){const end=tr.scrollLeft>=tr.scrollWidth-tr.clientWidth-4,k=end?cards.length-1:Math.min(cards.length-1,Math.round(tr.scrollLeft/step()));yb.forEach((b,j)=>b.classList.toggle('on',j===k))}
+tr.addEventListener('scroll',()=>requestAnimationFrame(sync),{passive:true});
+yb.forEach((b,k)=>b.onclick=()=>tr.scrollTo({left:k*step(),behavior:'smooth'}));
+$('#tp').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});$('#tn').onclick=()=>tr.scrollBy({left:step(),behavior:'smooth'});
+setTimeout(sync,60);
+
+/* fotos */
+const G=['ep-jz10','ep-jz5','ep-alb271','esbk-pan','hero-4','ep-alb75','pt-jz1','ep-jz59','pt-jz118'];
+$('#grid').innerHTML=G.map(n=>`<div class="photo rv" data-z><img loading="lazy" src="img/${n}.jpg" alt="Damián Alonso"></div>`).join('');
+$$('#grid .rv').forEach(el=>io.observe(el));
+
+/* foto ampliada */
+document.addEventListener('click',e=>{const z=e.target.closest('[data-z]');if(!z)return;$('#lb img').src=z.querySelector('img').src;$('#lb img').alt=z.querySelector('img').alt;$('#lb').classList.add('on')});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('on')});
+
+/* espacios patrocinio */
+function spot(n){$$('.hot').forEach(h=>h.classList.toggle('on',h.dataset.s==n));$$('#spotlist li').forEach(l=>l.classList.toggle('on',l.dataset.s==n))}
+$$('.hot,#spotlist li').forEach(el=>{el.addEventListener('mouseenter',()=>spot(el.dataset.s));el.addEventListener('click',()=>spot(el.dataset.s))});spot(0);
+
+/* copiar */
+$$('.cp').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.c);b.textContent='¡Copiado!'}catch(_){b.textContent='Selecciona el texto'}setTimeout(()=>b.textContent='Copiar',1800)});
+</script>
+</body>
+</html>
