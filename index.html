@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Damián Alonso #11 · Piloto de velocidad</title>
-<meta name="description" content="Damián Alonso Druez, piloto de velocidad nacido en 2011. SSP300 Copa de España y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<meta name="description" content="Damián Alonso Druez, piloto de velocidad nacido en 2011. Copa de España de Velocidad SSP300 con SRC Racing Team. Busca patrocinadores para 2027.">
 <link rel="icon" type="image/png" href="img/avispa.png">
 <meta property="og:title" content="Damián Alonso #11 · Piloto de velocidad">
-<meta property="og:description" content="Piloto de motociclismo nacido en 2011. SSP300 y ESBK con SRC Racing Team. Busca patrocinadores para 2027.">
+<meta property="og:description" content="Piloto de motociclismo nacido en 2011. Copa de España SSP300 con SRC Racing Team. Busca patrocinadores para 2027.">
 <meta property="og:image" content="https://damianalonsodruez.com/img/ep-alb272.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,12 +165,12 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 @media (prefers-reduced-motion:reduce){html.sa .sa-up,html.sa .sa-left,html.sa .sa-zoom,html.sa .sa-clip,html.sa .sa-title{opacity:1;transform:none;clip-path:none}}
 /* ---------- datos clave ---------- */
 .facts{background:var(--ink);color:#fff}
-.facts .in-w{display:grid;grid-template-columns:repeat(4,1fr)}
+.facts .in-w{display:grid;grid-template-columns:repeat(5,1fr)}
 .fact{padding:28px 22px;border-left:1px solid var(--rule-d)}
 .fact:first-child{border-left:0;padding-left:0}
 .fact b{display:block;font-stretch:68%;font-weight:800;font-size:clamp(44px,4.6vw,68px);line-height:1;color:var(--y)}
 .fact span{display:block;margin-top:6px;font-size:16px;color:#e2e2e5}
-@media(max-width:760px){.facts .in-w{grid-template-columns:1fr 1fr}.fact{padding:22px 0 22px 18px}.fact:nth-child(odd){border-left:0;padding-left:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--rule-d)}}
+@media(max-width:760px){.facts .in-w{grid-template-columns:1fr 1fr}.fact:last-child{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--rule-d)}.fact{padding:22px 0 22px 18px}.fact:nth-child(odd){border-left:0;padding-left:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--rule-d)}}
 
 /* ---------- secciones ---------- */
 .sec{padding-block:clamp(72px,9vw,128px)}
@@ -207,12 +207,13 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 
 /* ---------- 2026 ---------- */
 .season{background:var(--paper2)}
-.races{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.races{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+@media(max-width:1100px){.races{grid-template-columns:1fr 1fr}}
 .race{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--rule)}
 .race .photo{border-radius:0;aspect-ratio:4/3;cursor:zoom-in}
 .race .bd{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
 .race .when{font-size:14px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-.race h3{font-stretch:75%;font-weight:800;font-size:30px;text-transform:uppercase;line-height:1.05;margin-top:4px}
+.race h3{font-stretch:75%;font-weight:800;font-size:28px;text-transform:uppercase;line-height:1.05;margin-top:4px}
 .race p{color:var(--txt);margin:8px 0 16px;font-size:17px}
 .result{display:inline-block;margin-top:auto;font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;background:var(--y);color:var(--ink)}
 .result.pink{background:var(--pink);color:#fff}
@@ -355,7 +356,7 @@ footer a{color:var(--y)}
           <p class="cmeta"><span>#11</span><span>SSP300</span><span>SRC Racing Team</span></p>
         </div>
         <div class="cright">
-          <p class="lead">Campeón de Cataluña 2025 y debutante en el Campeonato de España 2026.<br><b>Busca patrocinadores para la temporada 2027.</b></p>
+          <p class="lead">Piloto de velocidad de Toro (Zamora). Lleva diez temporadas compitiendo y corre la Copa de España de Velocidad en SSP300 con SRC Racing Team.<br><b>Busca patrocinadores para la temporada 2027.</b></p>
           <div class="ctas"><a href="#patrocinar" class="btn b-k">Quiero patrocinar <svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg></a><a href="#quien" class="btn b-line">Conocer a Damián</a></div>
         </div>
       </div>
@@ -369,7 +370,8 @@ footer a{color:var(--y)}
   <div class="fact"><b class="edad">14</b><span>años de edad</span></div>
   <div class="fact"><b>10</b><span>temporadas compitiendo</span></div>
   <div class="fact"><b>4</b><span>campeonatos ganados</span></div>
-  <div class="fact"><b>2</b><span>victorias en la Copa de España 2026</span></div>
+  <div class="fact"><b>1</b><span>carrera ganada en 2026</span></div>
+  <div class="fact"><b>1</b><span>sprint ganado en 2026</span></div>
 </div></div>
 
 <!-- QUIÉN ES -->
@@ -379,14 +381,14 @@ footer a{color:var(--y)}
   <div class="about">
     <div class="rv">
       <p>Damián empezó a montar en moto con <b>5 años</b> en la Lorenzo Zamora School y a los 6 ya competía en Minimotos.</p>
-      <p>Desde entonces ha ido subiendo de categoría cada temporada: Mini GP, Moto5, Promo3 y ahora <b>SSP300</b>, con el equipo <b>SRC Racing Team</b>. En 2026 ha luchado por ganar la Copa de España y ha debutado en el <b>Campeonato de España (ESBK)</b>.</p>
+      <p>Desde entonces ha ido subiendo de categoría cada temporada: Mini GP, Moto5, Promo3 y ahora <b>SSP300</b>, con el equipo <b>SRC Racing Team</b>. En 2026 ha luchado por ganar la Copa de España y ha debutado en el <b>Campeonato de España de Superbikes (ESBK)</b>.</p>
       <dl class="ficha">
         <div><dt>Nacimiento</dt><dd>20/11/2011</dd></div>
         <div><dt>Ciudad</dt><dd>Toro (Zamora)</dd></div>
         <div><dt>Equipo</dt><dd>SRC Racing Team</dd></div>
         <div><dt>Moto</dt><dd>Yamaha R3</dd></div>
         <div><dt>Categoría</dt><dd>SSP300</dd></div>
-        <div><dt>Dorsal</dt><dd>11 (20 en la Copa)</dd></div>
+        <div><dt>Dorsal</dt><dd>20</dd></div>
       </dl>
     </div>
     <div class="photo rv"><img src="img/alb-portrait.jpg" alt="Damián con la gorra de Caberg y el casco en la mano" style="object-position:50% 38%"><span class="pcap">Damián en Albacete, 2026</span></div>
@@ -397,11 +399,12 @@ footer a{color:var(--y)}
 <section class="sec season" id="temporada"><div class="in-w">
   <div class="label"><b>2</b>Temporada 2026</div>
   <h2 class="title cond rv">Así ha ido este año</h2>
-  <p class="intro rv">Ha ganado dos carreras y ha llegado a ir líder de la Copa de España a falta de dos carreras. Además, ha corrido por primera vez en el Campeonato de España.</p>
+  <p class="intro rv">Su temporada en la Copa de España de Velocidad SSP300 con SRC Racing Team, carrera a carrera.</p>
   <div class="races">
-    <article class="race rv"><div class="photo" data-z><img src="img/alb-podium.jpg" alt="Damián en el podio de Albacete" style="object-position:50% 40%"></div><div class="bd"><span class="when">Copa de España</span><h3>Albacete</h3><p>Terminó en tercera posición y subió al podio.</p><span class="result">3.º · Podio</span></div></article>
-    <article class="race rv"><div class="photo" data-z><img src="img/esbk-grid.jpg" alt="Damián en la parrilla de salida en Jerez" style="object-position:50% 35%"></div><div class="bd"><span class="when">Campeonato de España (ESBK)</span><h3>Jerez</h3><p>Su primera carrera en el Campeonato de España, en el circuito de Jerez.</p><span class="result pink">Debut</span></div></article>
-    <article class="race rv"><div class="photo" data-z><img src="img/pt-jz129.jpg" alt="Damián con el casco puesto" style="object-position:50% 30%"></div><div class="bd"><span class="when">Copa de España · Última carrera</span><h3>Navarra</h3><p>La carrera final del año, donde se decide el campeón de la Copa.</p><span class="result grey">Resultado final</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/jz1-podio.jpg" alt="Damián con el cartel del primer puesto en Jerez" style="object-position:55% 30%"></div><div class="bd"><span class="when">1.ª carrera</span><h3>Jerez</h3><p>Victoria en la sprint y en la carrera.</p><span class="result">1.º Sprint · 1.º Carrera</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/alb-podium.jpg" alt="Damián en el podio de Albacete" style="object-position:50% 40%"></div><div class="bd"><span class="when">2.ª carrera</span><h3>Albacete</h3><p>Caída en la sprint y tercer puesto en la carrera.</p><span class="result">Caída Sprint · 3.º Carrera</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/hero-1.jpg" alt="Damián en curva en Jerez" style="object-position:50% 40%"></div><div class="bd"><span class="when">3.ª carrera</span><h3>Jerez II</h3><p>Cuarto en la sprint. En la carrera tuvo que abandonar por problemas técnicos.</p><span class="result pink">4.º Sprint · DNF Carrera</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/pt-jz129.jpg" alt="Damián con el casco puesto" style="object-position:50% 30%"></div><div class="bd"><span class="when">4.ª carrera</span><h3>Navarra</h3><p>Última carrera de la temporada. Se corre este fin de semana.</p><span class="result grey">Próximamente</span></div></article>
   </div>
 </div></section>
 
@@ -475,8 +478,8 @@ footer a{color:var(--y)}
     <h3 class="sub-title cond rv">Marcas que ya le apoyan</h3>
     <p class="sub-intro rv">Los huecos libres pueden ser para tu empresa.</p>
     <div class="logos rv">
-      <div>SRC Racing Team</div><div>Yamaha</div><div>Caberg</div><div>Karting Tordesillas</div><div>JATI</div>
-      <div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div>
+      <div>Canalones Elocas</div><div>danidfx</div><div>Grupo Improco</div><div>Metálicas Tapia</div><div>Rainers</div><div>Caberg</div>
+      <div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div>
     </div>
   </div>
 
@@ -623,7 +626,7 @@ const Y=[
  {y:2023,t:'Salto a Moto5',d:'Primera temporada en la MIR Racing Cup.',i:'y2023-a',r:[['','7.º','MIR Racing Cup · Moto5']]},
  {y:2024,t:'Salto a Promo3',d:'Sube a una moto más grande en la MIR Racing Cup.',i:'y2024-a',r:[['','—','MIR Racing Cup · Promo3']]},
  {y:2025,t:'Campeón de Cataluña',d:'Gana el campeonato de Cataluña en SSP300.',i:'y2025-a',r:[['g','1.º','Campeonato de Cataluña SSP300'],['s','2.º','Carrera de 3 horas en Braga (Portugal)']]},
- {y:2026,t:'Copa de España y ESBK',d:'Lucha por la Copa de España y debuta en el Campeonato de España.',i:'ep-alb61',r:[['g','1.º','Dos victorias en la Copa de España SSP300'],['b','3.º','Podio en Albacete'],['','Debut','Campeonato de España (ESBK) en Jerez']]},
+ {y:2026,t:'Copa de España SSP300',d:'Copa de España de Velocidad SSP300 con SRC Racing Team y debut en el Campeonato de España de Superbikes.',i:'ep-alb61',r:[['g','1.º','Jerez · Sprint y carrera'],['b','3.º','Albacete · Carrera'],['','4.º','Jerez II · Sprint'],['','Debut','Campeonato de España de Superbikes (ESBK)']],now:1},
 ];
 const tr=$('#track');
 tr.innerHTML=Y.map(o=>`<article class="yr"><div class="photo"><img src="img/${o.i}.jpg" alt="Damián en ${o.y}"></div><div class="bd"><div class="yy">${o.y}</div><h4>${o.t}</h4><p>${o.d}</p><ul>${o.r.map(([c,p,t])=>`<li><span class="pos ${c}">${p}</span><span>${t}</span></li>`).join('')}</ul></div></article>`).join('');
