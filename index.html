@@ -292,6 +292,8 @@ html.sa .label:not(.sa-in) b{transform:scale(0) rotate(-90deg)}
 .tier li:before{content:"✓";font-weight:800;color:var(--y)}
 .tier.main li:before{color:var(--pink)}
 .logos{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap)}
+.logos a{min-height:96px;display:grid;place-items:center;text-align:center;padding:12px;border-radius:12px;background:#fff;font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(17px,1.5vw,22px);line-height:1.1;transition:transform .25s,background .25s,color .25s}
+.logos a:hover{background:var(--ink);color:var(--y);transform:translateY(-3px)}
 .logos div{min-height:96px;display:grid;place-items:center;text-align:center;padding:12px;border-radius:12px;background:#fff;font-stretch:75%;font-weight:800;text-transform:uppercase;font-size:clamp(17px,1.5vw,22px);line-height:1.1}
 .logos div.free{background:transparent;border:2px dashed rgba(17,17,19,.35);font-stretch:100%;font-weight:600;text-transform:none;font-size:16px;color:#3a3a20}
 .cta-box{margin-top:clamp(56px,6vw,90px);background:var(--ink);color:#fff;border-radius:18px;padding:clamp(28px,4vw,50px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
@@ -476,10 +478,10 @@ footer a{color:var(--y)}
 
   <div class="block">
     <h3 class="sub-title cond rv">Marcas que ya me apoyan</h3>
-    <p class="sub-intro rv">Los huecos libres pueden ser para tu empresa.</p>
+    <p class="sub-intro rv">Pulsa en cada marca para visitar su web. Los huecos libres pueden ser para tu empresa.</p>
     <div class="logos rv">
-      <div>Canalones Elocas</div><div>danidfx</div><div>Grupo Improco</div><div>Metálicas Tapia</div><div>Rainers</div><div>Caberg</div>
-      <div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div>
+      <a href="https://elocas.es/" target="_blank" rel="noopener">Canalones Elocas</a><a href="https://danidfx.com/" target="_blank" rel="noopener">danidfx</a><a href="https://www.grupoimproco.es/es" target="_blank" rel="noopener">Grupo Improco</a><a href="http://www.metalicastapia.com/" target="_blank" rel="noopener">Metálicas Tapia</a><a href="https://www.rainers-sports.com/" target="_blank" rel="noopener">Rainers</a><a href="https://www.caberg.it/en/" target="_blank" rel="noopener">Caberg Helmets</a><a href="https://www.instagram.com/bodyfactorytoro/?hl=es" target="_blank" rel="noopener">Body Factory Toro</a><a href="https://kartingtordesillas.es/" target="_blank" rel="noopener">Karting Tordesillas</a>
+      <div class="free">Tu marca aquí</div><div class="free">Tu marca aquí</div>
     </div>
   </div>
 
@@ -524,7 +526,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
   add('.years','sa-up');add('.track','sa-up');add('.legend','sa-up');
   add('.grid .photo','sa-zoom',90);
   add('.why > div','sa-up',110);add('.spot-img','sa-clip');add('.spot-list li','sa-left',100);
-  add('.tier','sa-up',130);add('.logos > div','sa-zoom',50);add('.cta-box','sa-zoom');
+  add('.tier','sa-up',130);add('.logos > *','sa-zoom',50);add('.cta-box','sa-zoom');
   add('.card','sa-up',120);add('.fact','sa-up',100);
   const els=[...document.querySelectorAll('.sa-up,.sa-left,.sa-zoom,.sa-clip,.sa-title')];
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('sa-in');io.unobserve(e.target);
