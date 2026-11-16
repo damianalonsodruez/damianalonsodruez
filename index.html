@@ -375,7 +375,7 @@ footer a{color:var(--y)}
 
   <div class="hC">
     <div class="slices" id="slices">
-      <div class="sl"><img class="on" src="img/ep-alb272.jpg" alt="Damián tumbado en una curva en Albacete" style="object-position:58% 50%"></div>
+      <div class="sl"><img class="on" src="img/nv-104.jpg" alt="Damián tumbado con la moto en Navarra" style="object-position:50% 40%"></div>
       <div class="sl"><img class="on" src="img/pt-jz131.jpg" alt="Damián con el casco, en blanco y negro" style="object-position:42% 40%"></div>
       <div class="sl"><img class="on" src="img/h-a85.jpg" alt="Damián pasando junto al avión del circuito de Albacete" style="object-position:52% 60%"></div>
       <div class="sl"><img class="on" src="img/h-j20.jpg" alt="Damián tumbado en Jerez" style="object-position:60% 50%"></div>
@@ -436,7 +436,7 @@ footer a{color:var(--y)}
     <article class="race rv"><div class="photo" data-z><img src="img/jz1-podio.jpg" alt="Damián con el cartel del primer puesto en Jerez" style="object-position:55% 30%"></div><div class="bd"><span class="when">1.ª carrera</span><h3>Jerez</h3><p>Gané la sprint y la carrera.</p><span class="result">1.º Sprint · 1.º Carrera</span></div></article>
     <article class="race rv"><div class="photo" data-z><img src="img/alb-podium.jpg" alt="Damián en el podio de Albacete" style="object-position:50% 40%"></div><div class="bd"><span class="when">2.ª carrera</span><h3>Albacete</h3><p>Me caí en la sprint y terminé tercero en la carrera.</p><span class="result">Caída Sprint · 3.º Carrera</span></div></article>
     <article class="race rv"><div class="photo" data-z><img src="img/hero-1.jpg" alt="Damián en curva en Jerez" style="object-position:50% 40%"></div><div class="bd"><span class="when">3.ª carrera</span><h3>Jerez II</h3><p>Cuarto en la sprint. En la carrera tuve que abandonar por problemas técnicos.</p><span class="result pink">4.º Sprint · DNF Carrera</span></div></article>
-    <article class="race rv"><div class="photo" data-z><img src="img/pt-jz129.jpg" alt="Damián con el casco puesto" style="object-position:50% 30%"></div><div class="bd"><span class="when">4.ª carrera</span><h3>Navarra</h3><p>Última carrera de la temporada. La corro este fin de semana.</p><span class="result grey">Próximamente</span></div></article>
+    <article class="race rv"><div class="photo" data-z><img src="img/nv-87.jpg" alt="Damián peleando con otros pilotos en Navarra" style="object-position:50% 62%"></div><div class="bd"><span class="when">4.ª carrera</span><h3>Navarra</h3><p>En la sprint salí último y remonté hasta el quinto puesto. La carrera fue en mojado y casi no pude rodar en todo el fin de semana, pero acabé cuarto.</p><span class="result pink">5.º Sprint · 4.º Carrera</span></div></article>
   </div>
 </div></section>
 
@@ -606,7 +606,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
 
 /* portada: fotos que se deslizan y van cambiando */
 (function(){
-  const pool=[['h-j72','Damián de frente saliendo de una curva','52% 55%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','55% 40%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 50%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','60% 50%']];
+  const pool=[['nv-104','Damián tumbado con la moto en Navarra','50% 40%'],['nv-57','Damián en plena recta en Navarra','45% 50%'],['nv-94','Damián saliendo de una curva en Navarra','50% 45%'],['nv-88','Grupo de pilotos en Navarra','50% 70%'],['nv-25','Damián de lado con la moto en Navarra','45% 50%'],['h-j72','Damián de frente saliendo de una curva','52% 55%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','55% 40%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 50%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','60% 50%']];
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   const cache={};pool.forEach(([n])=>{const i=new Image();i.decoding='async';i.src='img/'+n+'.jpg';cache[n]=i});
   const slices=[...document.querySelectorAll('#slices .sl')];
@@ -657,7 +657,7 @@ const Y=[
  {y:2023,t:'Salto a Moto5',d:'Mi primera temporada en la MIR Racing Cup.',i:'y2023-a',r:[['','7.º','MIR Racing Cup · Moto5']]},
  {y:2024,t:'Salto a Promo3',d:'Subo a una moto más grande en la MIR Racing Cup.',i:'y2024-a',r:[['','—','MIR Racing Cup · Promo3']]},
  {y:2025,t:'Campeón de Cataluña',d:'Gano el campeonato de Cataluña en SSP300.',i:'y2025-a',r:[['g','1.º','Campeonato de Cataluña SSP300'],['s','2.º','Carrera de 3 horas en Braga (Portugal)']]},
- {y:2026,t:'Copa de España SSP300',d:'Corro la Copa de España de Velocidad SSP300 con SRC Racing Team y debuto en el Campeonato de España de Superbikes.',i:'y2026',pos:'50% 61%',r:[['g','1.º','Jerez · Sprint y carrera'],['b','3.º','Albacete · Carrera'],['','4.º','Jerez II · Sprint'],['','Debut','Campeonato de España de Superbikes (ESBK)']],now:1},
+ {y:2026,t:'Copa de España SSP300',d:'Corro la Copa de España de Velocidad SSP300 con SRC Racing Team y debuto en el Campeonato de España de Superbikes.',i:'y2026',pos:'50% 61%',r:[['g','1.º','Jerez · Sprint y carrera'],['b','3.º','Albacete · Carrera'],['','4.º','Jerez II · Sprint'],['','4.º','Navarra · Carrera en mojado'],['','Debut','Campeonato de España de Superbikes (ESBK)']],now:1},
 ];
 const tr=$('#track');
 tr.innerHTML=Y.map(o=>`<article class="yr"><div class="photo"><img src="img/${o.i}.jpg" alt="Damián en ${o.y}" style="object-position:${o.pos||'50% 50%'}"></div><div class="bd"><div class="yy">${o.y}</div><h4>${o.t}</h4><p>${o.d}</p><ul>${o.r.map(([c,p,t])=>`<li><span class="pos ${c}">${p}</span><span>${t}</span></li>`).join('')}</ul></div></article>`).join('');
@@ -670,8 +670,8 @@ $('#tp').onclick=()=>tr.scrollBy({left:-step(),behavior:'smooth'});$('#tn').oncl
 setTimeout(sync,60);
 
 /* fotos */
-const G=['ep-jz10','hero-2','hero-4','esbk-lean','esbk-pit','esbk-helmet','alb-trophy','ep-alb271','esbk-team'];
-const GP={'hero-2':'50% 15%','hero-4':'50% 20%','esbk-helmet':'50% 35%','alb-trophy':'50% 25%','esbk-team':'60% 30%','esbk-pit':'50% 45%'};
+const G=['nv-26','hero-2','nv-53','esbk-lean','nv-47','nv-60','alb-trophy','ep-alb271','esbk-team'];
+const GP={'nv-26':'50% 35%','nv-47':'50% 30%','nv-60':'40% 35%','nv-53':'50% 50%','hero-2':'50% 15%','hero-4':'50% 20%','esbk-helmet':'50% 35%','alb-trophy':'50% 25%','esbk-team':'60% 30%','esbk-pit':'50% 45%'};
 $('#grid').innerHTML=G.map(n=>`<div class="photo rv" data-z><img loading="lazy" src="img/${n}.jpg" alt="Damián Alonso" style="object-position:${GP[n]||'50% 50%'}"></div>`).join('');
 $$('#grid .rv').forEach(el=>io.observe(el));
 
