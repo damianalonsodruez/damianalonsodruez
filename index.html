@@ -375,10 +375,10 @@ footer a{color:var(--y)}
 
   <div class="hC">
     <div class="slices" id="slices">
-      <div class="sl"><img class="on" src="img/nv-104.jpg" alt="Damián tumbado con la moto en Navarra" style="object-position:50% 40%"></div>
+      <div class="sl"><img class="on" src="img/nv-104.jpg" alt="Damián tumbado con la moto en Navarra" style="object-position:50% 13%"></div>
       <div class="sl"><img class="on" src="img/pt-jz131.jpg" alt="Damián con el casco, en blanco y negro" style="object-position:42% 40%"></div>
       <div class="sl"><img class="on" src="img/h-a85.jpg" alt="Damián pasando junto al avión del circuito de Albacete" style="object-position:52% 60%"></div>
-      <div class="sl"><img class="on" src="img/h-j20.jpg" alt="Damián tumbado en Jerez" style="object-position:60% 50%"></div>
+      <div class="sl"><img class="on" src="img/h-j20.jpg" alt="Damián tumbado en Jerez" style="object-position:72% 45%"></div>
     </div>
     <div class="cband">
       <div class="in-w cb">
@@ -606,7 +606,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
 
 /* portada: fotos que se deslizan y van cambiando */
 (function(){
-  const pool=[['nv-104','Damián tumbado con la moto en Navarra','50% 40%'],['nv-57','Damián en plena recta en Navarra','45% 50%'],['nv-94','Damián saliendo de una curva en Navarra','50% 45%'],['nv-88','Grupo de pilotos en Navarra','50% 70%'],['nv-25','Damián de lado con la moto en Navarra','45% 50%'],['h-j72','Damián de frente saliendo de una curva','52% 55%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','55% 40%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 50%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','60% 50%']];
+  const pool=[['nv-104','Damián tumbado con la moto en Navarra','50% 13%'],['nv-57','Damián en plena recta en Navarra','55% 50%'],['nv-94','Damián saliendo de una curva en Navarra','50% 22%'],['nv-88','Grupo de pilotos en Navarra','50% 70%'],['nv-25','Damián de lado con la moto en Navarra','45% 50%'],['h-j72','Damián de frente saliendo de una curva','52% 12%'],['ep-jz5','Damián en curva en Jerez','58% 50%'],['h-j119','Damián con el casco puesto en el box','50% 30%'],['h-a240','Damián peleando con sus rivales en Albacete','62% 55%'],['esbk-start','Salida de la carrera en Jerez','50% 75%'],['h-a185','Damián en la parrilla con el paraguas del equipo','62% 18%'],['h-j92','Damián en pelea con otro piloto en Jerez','50% 60%'],['h-j79','Damián tumbado en Jerez','55% 55%'],['ep-alb272','Damián tumbado en una curva en Albacete','58% 8%'],['pt-jz131','Damián con el casco, en blanco y negro','42% 40%'],['h-a85','Damián pasando junto al avión del circuito de Albacete','52% 60%'],['h-j20','Damián tumbado en Jerez','72% 45%']];
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   const cache={};pool.forEach(([n])=>{const i=new Image();i.decoding='async';i.src='img/'+n+'.jpg';cache[n]=i});
   const slices=[...document.querySelectorAll('#slices .sl')];
